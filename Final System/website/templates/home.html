@@ -1,0 +1,264 @@
+{%extends "layout.html"%}
+{% block navLinks %}
+<li class="nav-item active"><a href="{{ url_for('home') }}" class="nav-link"><i
+        class="fas fa-home"></i> Home</a></li>
+<li class="nav-item "><a href="{{ url_for('inventory') }}" class="nav-link"><i class="fas fa-th"></i>
+    Inventory</a></li>
+<li class="nav-item"><a href="{{ url_for('orders') }}" class="nav-link"><i
+        class="fas fa-shopping-cart"></i> Orders</a></li>
+<li class="nav-item"><a href="{{ url_for('analytics') }}" class="nav-link"><i
+        class="fas fa-chart-bar"></i></i> Analytics</a></li>
+<li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link"><i
+        class="fas fa-door-closed"></i></i> Log Out</a></li>
+{% endblock %}
+{%block content%}
+
+
+
+<style>
+.parallax {
+    /* The image used */
+    background-image: url('/static/image/gerdin.jpg');
+
+    /* Set a specific height  */
+    min-height: 700px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Welcome {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size:36px;
+    color: #da0941;
+}
+
+.slideshowGoods1 {
+    position: absolute;
+    top: 115%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.slideshowGoods3 {
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slideshowGoods2 {
+    position: absolute;
+    top: 115%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Create a row to put 4 Images*/
+.row1 {
+    display: flex;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1 {
+    flex: 25%;
+    padding: 5px;
+}
+
+/* Create a row to put 4 Images*/
+.row2 {
+    display: flex;
+}
+
+/* Create four equal columns that sits next to each other */
+.column2 {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+.mySlides {display:none;}
+
+</style>
+
+
+<a
+ class="weatherwidget-io" href="https://forecast7.com/en/42d03n93d63/ames/"
+ data-label_1="AMES" data-label_2="WEATHER" data-theme="original"
+ data-basecolor="#951253" >AMES WEATHER
+</a>
+
+
+<script>
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+if(!d.getElementById(id)){js=d.createElement(s);
+js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+fjs.parentNode.insertBefore(js,fjs);
+}}(document,'script','weatherwidget-io-js');
+
+</script>
+
+
+<div class="parallax">
+  <div class="Welcome"><b>Welcome to Alpha Computer Inc.</b></div>
+</div>
+
+<div style="height:50px;font-size:36px"> </div>
+
+<div style="height:300px;font-size:36px">
+  <div class="slideshowGoods1" style="max-width:400px;height:250px ">
+    <img class="mySlides1" src="/static/image/GalaxyNote.jpg" style="width:100%">
+
+    <img class="mySlides1" src="/static/image/applexs2.jpg" style="width:100%">
+  </div>
+
+  <div class="slideshowGoods2" style="max-width:400px;height:250px ">
+    <img class="mySlides2" src="/static/image/CallofDuty.jpg" style="width:100%">
+
+    <img class="mySlides2" src="/static/image/OctopathTraveler.jpg" style="width:100%">
+  </div>
+
+  <div class="slideshowGoods3" style="max-width:400px;height:250px ">
+    <img class="mySlides3" src="/static/image/AppleMacBookPro.jpg" style="width:100%">
+
+    <img class="mySlides3" src="/static/image/dell.jpg" style="width:100%">
+  </div>
+
+</div>
+
+<script>
+var slideIndex = 0;
+mis407slideshow1();
+
+function mis407slideshow1() {
+    var i;
+    var x = document.getElementsByClassName("mySlides1");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(mis407slideshow1, 2000);
+}
+</script>
+
+<script>
+var slideIndex = 0;
+mis407slideshow2();
+
+function mis407slideshow2() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(mis407slideshow2, 2000);
+}
+</script>
+
+
+<script>
+var slideIndex = 0;
+mis407slideshow3();
+
+function mis407slideshow3() {
+    var i;
+    var x = document.getElementsByClassName("mySlides3");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(mis407slideshow3, 2000);
+}
+</script>
+
+<h1><font size="5.7"><b>Direct orders</b></font></h1>
+<div style="height:200px;">
+  <div class="row1">
+
+    <div class="column1">
+      <a href="https://www.microsoft.com/en-us/" target="_blank">
+        <img src="/static/image/Microsoft.jpg" alt="Microsoft" style="width:100%">
+      </a>
+    </div>
+
+    <div class="column1">
+      <a href="https://www.intel.com/" target="_blank">
+        <img src="/static/image/Intel.jpg" alt="Intel" style="width:100%">
+      </a>
+    </div>
+
+    <div class="column1">
+      <a href="https://www.apple.com/" target="_blank">
+        <img src="/static/image/Apple.jpg" alt="Apple" style="width:100%">
+      </a>
+    </div>
+
+    <div class="column1">
+      <a href="https://www.samsung.com/us/" target="_blank">
+        <img src="/static/image/Samsung.jpg" alt="Samsung" style="width:100%">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<div style="height:300px;background-color:#GHOSTWHITE">
+  <div class="row2">
+
+    <div class="column2">
+      <h1 class="title"> <font size="4.5"><b> Company Details </b></font></h1>
+      <address class="company-detail">
+        Alpha Computer Inc.<br>
+        2434 Osborn Dr<br>
+        Ames<br>
+        50010
+      </address>
+    </div>
+
+    <div class="column2">
+      <h1 class="title"> <font size="4.5"><b> Follow us on social media </b> </font></h1>
+      <a href="https://twitter.com/" target="_blank">
+      <img title="Twitter" alt="Twitter" src="/static/image/twitter.png" width="35" height="35" />
+      </a>
+      <a href="https://www.pinterest.com/" target="_blank">
+      <img title="Pinterest" alt="Pinterest" src="/static/image/pinterest.png" width="35" height="35" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+      <img title="Facebook" alt="Facebook" src="/static/image/facebook.png" width="35" height="35" />
+      </a>
+      <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">
+      <img title="Instagram" alt="Instagram" src="/static/image/instagram.png" width="35" height="35" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank">
+      <img title="Youtube" alt="Youtube" src="/static/image/youtube.png" width="35" height="35" />
+      </a>
+    </div>
+
+    <div class="column2">
+      <h1 class="title"> <font size="4.5"><b> Company Contacts </b></font></h1>
+      <ul class="nospace">
+        <li class="company-detail"><span class="fa fa-phone" style="color:red"></span> +1 (515) 456 7890</li>
+        <li><span class="fa fa-envelope" style="color:red"></span> alphainc@gmail.com</li>
+      </ul>
+    </div>
+
+
+  </div>
+
+</div>
+
+{%endblock%}

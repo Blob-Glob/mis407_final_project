@@ -1,0 +1,71 @@
+body {
+    background: mediumslateblue;
+    margin: 0;
+}
+
+.center {
+    margin: 20% auto;
+}
+
+.header h1 {
+    font-size: 1.5em !important;
+}
+
+.login form {
+    margin: 1em auto;
+    max-width: 400px;
+    position: absolute;
+    top: calc(50% - 230px);
+    left: calc(50% - 156px);
+    background: #dedede;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 8px 14px 3px #3c3c3c;
+    text-align: center;
+}
+
+.login form input {
+    text-align: center;
+
+}
+
+.logo {
+    margin: 0;
+
+}
+
+nav {
+    position: relative;
+    background-color: #dddddd;
+    padding: 10px;
+    box-shadow: 3px 8px 14px 3px #3c3c3c;
+}
+
+@media only screen and (min-width: 992px) {
+    ul.menu {
+        position: absolute;
+        right: 0;
+    }
+
+    ul.menu li {
+        float: left;
+        border-left: 1px solid #777777;
+        height: 100%;
+    }
+
+}
+
+ul.menu a:hover {
+    background: #aaa;
+}
+
+ul.menu a {
+    display: block;
+    text-decoration: none;
+    padding: 13px;
+    transition: background 0.15s ease;
+}
+
+ul.menu a:active {
+    color: black;
+}
